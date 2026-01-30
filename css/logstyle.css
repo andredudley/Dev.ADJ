@@ -61,6 +61,12 @@
     height: 100vh;
 }
 
+article {
+    margin: 5vh auto;
+    border-bottom: 2px solid;
+    padding: 25px;
+}
+
 #content h2 {
     padding-bottom: 5vh;
     text-align: center;
