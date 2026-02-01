@@ -1,6 +1,5 @@
 html {
     font-family: Merriweather, Georgia, 'Times New Roman', Times, serif;
-    margin: 0px;
 }
 
 body {
@@ -112,24 +111,51 @@ header {
     height: 75vh;
 }
 
-/*log styling*/
+/*log styling, for border between log and projects. I'm sure there is a better solution, but it hasn't come to mind yet.*/
 .log {
-    width: 50%;
-    padding: 15px;
     border-right: 2px solid;
-    text-align: center;
 }
 
-/*project styling*/
-.projects {
+/*project and log content styling*/
+.projects, .log {
     width: 50%;
     padding: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/*styling p elements in the "From The Log" and "Stuff I've Done" sections*/
+/*styling p and a elements in the "From The Log" and "Stuff I've Done" sections*/
 .log p, .projects p {
     font-size: 1.1rem;
+}
+
+.log a, .projects a { 
+    color: white;
+}
+
+/*styling for link options on front page. "View Musings", "View Projects", "View Log"*/
+.view-btn{
+    background: linear-gradient(180deg, #a161b6, #a800d8, #9000a8);
+    color: white;
+    box-shadow: 0 0 4px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 4px;
+    width: 10vw;
+    margin: 10vh auto;
+    transition: all 0.7s ease;
+}
+
+.view-btn:hover {
+    background: white;
+    color: #9000a8;
+}
+
+#musings { 
+    position: relative;
+    top: 10vh;
 }
 
 footer {
@@ -394,5 +420,13 @@ header a {
 /*styling p elements in the "From The Log" and "Stuff I've Done" sections*/
 .log p, .projects p {
     font-size: 1.1rem;
+}
+
+.view-btn {
+    width: 33vw;
+}
+
+footer {
+    margin-top: 40vh
 }
 }
