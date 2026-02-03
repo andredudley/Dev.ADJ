@@ -203,87 +203,45 @@ footer {
     margin-top: 3vh;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+/*RESPONSIVE BREAKPOINTS (genuinely hate it here)*/
+
+/*Tablet breakpoint (768px and below)*/
+@media screen and (max-width: 768px) {
     body {
-        grid-template-columns: 1fr;
         grid-template-areas: 
-            "header"
-            "main"
-            "aside"
-            "footer";
+            "header header"
+            "aside main"
+            "footer footer";
+        grid-template-columns: 180px 1fr;
+        gap: 8px;
+    }
+    
+    header {
+        height: 70px;
+        padding: 8px 0;
     }
     
     aside {
-        position: static;
-        width: 100%;
-        height: auto;
-        top: 0;
-        order: 3;
-        margin-top: 20px;
+        width: 180px;
+        top: 70px;
+        height: calc(100vh - 70px);
     }
     
     main {
-        left: 0;
-        width: 90%;
-        margin-top: 80px;
-    }
-    
-    footer {
-        width: 90%;
-        left: 0;
-        margin-top: 20px;
+        left: 2vw;
+        width: calc(100vw - 200px);
+        padding-right: 15px;
     }
     
     .main-content {
-        width: 90%;
-        height: auto;
-        min-height: 50vh;
-        margin: 5vh auto;
-    }
-    
-    .view-btn {
-        width: 40vw;
-        margin: 5vh auto;
-    }
-    
-    .navbar > ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 0;
-    }
-    
-    .navbar > ul > li {
-        margin: 10px 20px;
-    }
-    
-    .links {
-        top: 0;
-        padding: 20px 0;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    body {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "header"
-            "main"
-            "aside"
-            "footer";
-        gap: 20px;
-    }
-    
-    .main-content {
-        width: 80%;
-        padding-top: 8vh;
+        width: 75vw;
+        padding-top: 3vh;
+        margin: 8vh auto;
+        line-height: 1.8rem;
     }
     
     .main-content h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .main-content p {
@@ -291,8 +249,10 @@ footer {
     }
     
     .view-btn {
-        width: 30vw;
+        width: 15vw;
+        min-width: 120px;
         margin: 8vh auto;
+        padding: 8px;
     }
     
     footer {
@@ -300,207 +260,243 @@ footer {
     }
     
     .navbar > ul > li {
-        margin: 10px 25px;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    body {
-        grid-template-columns: 200px 1fr;
-        grid-template-areas: 
-            "header header"
-            "aside main"
-            "footer footer";
-    }
-    
-    aside {
-        position: fixed;
-        width: 200px;
-        height: 100vh;
-        top: 13.5vh;
-        left: 0;
-    }
-    
-    main {
-        left: 3vw;
-        width: 70vw;
-        margin-top: 13.5vh;
-    }
-    
-    .main-content {
-        width: 65vw;
-        height: 55vh;
-        padding-top: 5vh;
-    }
-    
-    .main-content h2 {
-        font-size: 2.5rem;
-    }
-    
-    .main-content p {
-        font-size: 20px;
-    }
-    
-    .view-btn {
-        width: 15vw;
-        margin: 10vh auto;
-    }
-    
-    footer {
-        width: 25vw;
-        left: 11vw;
-    }
-    
-    .navbar > ul {
-        display: block;
-    }
-    
-    .navbar > ul > li {
-        margin: 25px auto;
-        flex-direction: column;
-    }
-    
-    .links {
-        top: 10%;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    body {
-        grid-template-columns: 250px 1fr;
-        gap: 15px;
-    }
-    
-    aside {
-        width: 250px;
-    }
-    
-    main {
-        width: 75vw;
-        left: 2vw;
-    }
-    
-    .main-content {
-        width: 70vw;
-        max-width: 1200px;
-    }
-    
-    .main-content h2 {
-        font-size: 2.8rem;
-    }
-    
-    .main-content p {
-        font-size: 22px;
-        line-height: 2.4rem;
-    }
-    
-    .view-btn {
-        width: 12vw;
-        min-width: 150px;
-        padding: 12px;
-    }
-    
-    footer {
-        width: 30vw;
-        max-width: 500px;
-        left: 10vw;
-    }
-    
-    .cta-btn {
-        padding: 18px 25px;
-        font-size: 1.2rem;
-    }
-}
-
-/* Extra adjustments for very small screens (under 576px) */
-@media (max-width: 575px) {
-    header {
-        flex-direction: column;
-        padding: 10px 0;
-        position: relative;
-    }
-    
-    .adj-logo {
-        margin-bottom: 10px;
-    }
-    
-    body {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "header"
-            "main"
-            "aside"
-            "footer";
-        gap: 5px;
-    }
-    
-    aside {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-    }
-    
-    main {
-        left: 0;
-        width: 95%;
         margin: 20px auto;
-    }
-    
-    .main-content {
-        width: 95%;
-        height: auto;
-        min-height: 40vh;
-        margin: 5vh auto;
-        padding-top: 2vh;
-    }
-    
-    .main-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .main-content p {
-        font-size: 16px;
-        line-height: 1.8rem;
-    }
-    
-    .view-btn {
-        width: 60vw;
-        margin: 5vh auto;
-        padding: 8px;
-        font-size: 0.9rem;
-    }
-    
-    footer {
-        width: 90%;
-        left: 0;
-        padding: 8px;
-    }
-    
-    .navbar > ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-    }
-    
-    .navbar > ul > li {
-        margin: 8px 15px;
     }
     
     .nav-link {
         font-size: 16px;
     }
     
-    .links {
-        top: 0;
+    .cta-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+}
+
+/*Mobile breakpoint (576px and below)*/
+@media screen and (max-width: 576px) {
+    body {
+        grid-template-areas: 
+            "header"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+    }
+    
+    header {
+        position: relative;
+        height: auto;
+        min-height: 60px;
         padding: 15px 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin-top: 20px;
+        padding: 20px 0;
+        order: 3; /*This moves it after main content*/
+        overflow-x: hidden; /*Prevent horizontal scrolling*/
+    }
+    
+    main {
+        position: relative;
+        left: 0;
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 20px;
+        order: 2; /*This ensures main comes before aside*/
+    }
+    
+    .main-content {
+        width: 75vw;
+        padding-top: 2vh;
+        margin: 2vh auto 5vh;
+        line-height: 1.6rem;
+        max-width: 100%; /*Ensure it doesn't overflow*/
+    }
+    
+    .main-content h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .main-content p {
+        font-size: 16px;
+        text-align: justify;
+        margin-bottom: 25px;
+        word-wrap: break-word;
+    }
+    
+    .view-btn {
+        width: 70vw;
+        min-width: 200px;
+        margin: 3vh auto;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 2vh;
+    }
+    
+    footer {
+        width: 90vw;
+        margin: 20px auto;
+        padding: 15px 0;
+        order: 4; /*footer stays at bottom*/
+        border-top: none;
+        left: -2vw;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    .adj-logo {
+        padding: 10px;
+    }
+    
+    .cta-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    /*Mobile navbar*/
+    .navbar {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    
+    .navbar > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar > ul > li {
+        margin: 0;
+        flex: 0 0 auto; /*Don't grow or shrink*/
+    }
+    
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.1);
+        white-space: nowrap;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    /*Ensure links container is visible*/
+    .links {
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow: hidden;
     }
     
     .links p {
-        margin: 8px;
+        margin: 15px 0;
+        word-wrap: break-word;
+    }
+}
+
+/*Small mobile devices (below 400px)*/
+@media screen and (max-width: 400px) {
+    .main-content {
+        width: 95vw;
+        padding: 10px;
+    }
+    
+    .main-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .main-content p {
+        font-size: 14px;
+        line-height: 1.4rem;
+    }
+    
+    .view-btn {
+        width: 85vw;
+        min-width: 180px;
+        font-size: 14px;
+    }
+    
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    
+    footer {
+        width: 95vw;
+        font-size: 14px;
+    }
+    
+    .navbar > ul {
+        gap: 8px;
+        padding: 0 10px;
+    }
+    
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 14px;
+        white-space: normal; /*Allow text to wrap on very small screens*/
+        min-width: 0;
+    }
+    
+    /*Adjust for very small screens - stack navigation vertically*/
+    @media screen and (max-width: 350px) {
+        .navbar > ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .navbar > ul > li {
+            width: 90%;
+        }
+        
+        .nav-link {
+            width: 100%;
+            white-space: normal;
+            padding: 10px 5px;
+        }
     }
 }
