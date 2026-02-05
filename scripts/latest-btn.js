@@ -1,7 +1,7 @@
   // Update for newest post/project. Update manually.
 document.addEventListener('DOMContentLoaded', function() { 
   const LATEST_POST = {
-    url: "/pages/log/",  
+    url: "./pages/log/",  
     title: "Updated CTA Button",               
     date: "2026-1-30",                       
     description: "Updated my CTA button to go to newest update. Pretty cool."
