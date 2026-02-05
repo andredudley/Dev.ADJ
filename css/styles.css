@@ -38,12 +38,12 @@ body {
 
 aside { 
     grid-area: aside;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 100px);
     background-color: rgba(119, 0, 139, 0.99);
     width: 20vw;
     position: fixed;
     left: 0;
-    top: 70px;
+    top: 100px;
     justify-content: center;
     z-index: 10;
 }
