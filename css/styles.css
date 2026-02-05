@@ -29,6 +29,17 @@
     margin: 0;
  }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
  header { 
     grid-area: header;
     position: fixed;
@@ -254,29 +265,32 @@
     grid-template-rows: 70px auto 1fr auto;
   }
 
+  .menu-toggle {
+    display: block;
+  }
+
   aside {
-    position: fixed;
     width: 100%;
     height: auto;
     top: 70px;
-    left: 0;
-    padding: 1rem 0;
-    text-align: center;
+    transform: translateY(-120%);
+    transition: transform 0.3s ease;
+  }
+
+  aside.open {
+    transform: translateY(0);
   }
 
   .navbar ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
-    margin: 1rem 0;
+    padding: 1rem 0;
   }
 
   main.main-content {
-    margin-top: 160px;
-    margin-left: 0;
-    padding: 1rem;
+    margin-top: 90px;
   }
+
 
   footer {
     margin-left: 0;
