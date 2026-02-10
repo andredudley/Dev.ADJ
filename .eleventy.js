@@ -1,3 +1,4 @@
+//sorts by time (in theory). If dates mess up, I have fallback in the md files for logs.
 const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
@@ -8,7 +9,7 @@ module.exports = function(eleventyConfig) {
       .toLocal()
       .toFormat(format);
   });
-  // Copy your existing static site files through to _site
+  // Copy existing static site files through to log
   eleventyConfig.addPassthroughCopy("index.html");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("assets");
