@@ -3,10 +3,18 @@ const { DateTime } = require("luxon");
 module.exports = function(eleventyConfig) {
 
   // Add date filter for Nunjucks
+const { DateTime } = require("luxon");
+
+module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateObj, format = "MMMM d, yyyy") => {
-    return DateTime.fromJSDate(dateObj).toFormat(format);
+    return DateTime
+      .fromJSDate(dateObj, { zone: "utc" }) // treat input as UTC
+      .toLocal()                            // converts to local time
+      .toFormat(format);
   });
-  // Copy your existing static site files through to _site
+};
+
+  // Copy existing static site files through to log
   eleventyConfig.addPassthroughCopy("index.html");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("assets");
