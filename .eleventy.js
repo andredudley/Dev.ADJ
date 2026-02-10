@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "log-src",   // ONLY Eleventy content lives here
-      output: "_site"
+      output: "log"
     }
   };
 };

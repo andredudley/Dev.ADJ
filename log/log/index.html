@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dev.ADJ | Dev.ADJ | Log</title>
+    <title>Dev.ADJ | Log</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/adjlogos/ADJfavicon.ico">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
         .main-content { 
@@ -16,8 +18,12 @@
         #title { 
             margin-bottom: 3.5rem; text-align: center; 
             }
-        h3 { 
+        p:first-of-type { 
             margin-bottom: 1rem; 
+        }
+        p:last-of-type {
+            border-bottom: 1px solid;
+            padding-bottom: 2rem;
         }
         article { 
             margin-bottom: 3rem;
@@ -39,13 +45,18 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="/">Welcome</a></li>
-                <li><a href="/pages/about/">About</a></li>
-                <li><a href="/pages/musings/">Musings</a></li>
-                <li><a href="/pages/projects/">Projects</a></li>
-                <li><a href="/log/">Log</a></li>
+                <li><a class="nav-link tab-link" href="/">Welcome</a></li>
+                <li><a class="nav-link tab-link" href="/pages/about/">About</a></li>
+                <li><a class="nav-link tab-link" href="/pages/musings/">Musings</a></li>
+                <li><a class="nav-link tab-link" href="/pages/projects/">Projects</a></li>
+                <li><a class="nav-link tab-link" href="/log/">Log</a></li>
             </ul>
         </nav>
+
+        <div class="links">
+        <a href="https://github.com/andredudley" target="_blank"><span class="logo fa fa-github fa-2x"></span></a>
+        <a href="https://www.linkedin.com/in/andre-dudley-jr/" target="_blank"><span class="logo fa fa-linkedin"></span></a>    
+    </div>
     </aside>
 
     <main class="main-content">
@@ -54,11 +65,36 @@
 
 
 <article class="logs">
+    <h3>It works.</h3>
+    <p>
+        Logged on
+        <time datetime="2026-02-08">
+            February 8, 2026
+        </time>
+    </p>
+    <p>We are <em><strong>SO</strong></em> back, brother.</p>
+
+</article>
+
+<article class="logs">
+    <h3>Enter 11ty. Another Test.</h3>
+    <p>
+        Logged on
+        <time datetime="2026-02-08">
+            February 8, 2026
+        </time>
+    </p>
+    <p>Don't mind me. Just checking something out with 11ty. No big deal.</p>
+<p>Nevermind, it kinda is. My mood for tonight is riding on this.</p>
+
+</article>
+
+<article class="logs">
     <h3>Enter 11ty.</h3>
     <p>
         Logged on
-        <time datetime="2026-02-09">
-            February 9, 2026
+        <time datetime="2026-02-08">
+            February 8, 2026
         </time>
     </p>
     <p>And, here it is... my first ever blog post using 11ty. It's real neat stuff when you get the hang of it.</p>
@@ -67,27 +103,27 @@
 </article>
 
 <article class="logs">
+    <h3>Genuinely Losing My Marbles</h3>
+    <p>
+        Logged on
+        <time datetime="2026-02-02">
+            February 2, 2026
+        </time>
+    </p>
+    <p>CSS is <strong>STILL</strong> a real kick in the head.</p>
+
+</article>
+
+<article class="logs">
     <h3>And Now... WE. ARE. LIVE.</h3>
     <p>
         Logged on
-        <time datetime="2026-02-04">
+        <time datetime="2026-02-01">
             February 1, 2026
         </time>
     </p>
     <p>The first log entry since launch! Feels good. Definitely a ton of stuff coming soon because I have so much planned for this blog.</p>
 <p>With all that cool stuff being said, I have a blog to work on.</p>
-
-</article>
-
-<article class="logs">
-    <h3>Genuinely Losing My Marbles</h3>
-    <p>
-        Logged on
-        <time datetime="2026-02-03">
-            February 2, 2026
-        </time>
-    </p>
-    <p>CSS is <strong>STILL</strong> a real kick in the head.</p>
 
 </article>
 
