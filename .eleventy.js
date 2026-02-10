@@ -9,12 +9,13 @@ module.exports = function(eleventyConfig) {
       .toLocal()
       .toFormat(format);
   });
-  // Copy existing static site files through to log
-  eleventyConfig.addPassthroughCopy("index.html");
+  
+
+/* eleventyConfig.addPassthroughCopy("index.html");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("scripts");
-  eleventyConfig.addPassthroughCopy("pages"); // if other static pages exist
+ eleventyConfig.addPassthroughCopy("pages"); */ 
 
   return {
     dir: {
