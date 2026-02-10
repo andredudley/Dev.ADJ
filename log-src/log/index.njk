@@ -1,0 +1,22 @@
+---
+layout: log-layout.njk
+title: Dev.ADJ | Log
+permalink: /log/
+
+
+---
+
+<h2 id="title">Log</h2>
+
+{% for post in collections.log | reverse %}
+<article class="logs">
+    <h3>{{ post.data.title }}</h3>
+    <p>
+        Logged on
+        <time datetime="{{ post.date | postDate('yyyy-MM-dd') }}">
+            {{ post.date | postDate }}
+        </time>
+    </p>
+    {{ post.templateContent | safe }}
+</article>
+{% endfor %}
