@@ -5,7 +5,7 @@ tags: log
 permalink: false
 ---
 
-Nearly demolished my website integrating 11ty into my logs Hate it here. 
+Nearly demolished my website integrating 11ty into my logs. Hate it here. 
 <br><br>
 I did it, but my **goodness**.
 <br><br>
