@@ -3,7 +3,7 @@ const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
 
-  // Simple date display filter (fixes "day before" in most US timezones)
+  //simple date display filter (fixes "day before" in most US timezones)
   eleventyConfig.addFilter("postDate", (dateObj, format = "MMMM d, yyyy") => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" })
       .toLocal()
@@ -11,11 +11,6 @@ module.exports = function(eleventyConfig) {
   });
   
 
-/* eleventyConfig.addPassthroughCopy("index.html");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("scripts");
- eleventyConfig.addPassthroughCopy("pages"); */ 
 
   return {
     dir: {
