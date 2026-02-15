@@ -57,6 +57,7 @@
  }
 
  .musing-header { 
+    grid-area: main;
     margin-bottom: 5rem;
  }
 
