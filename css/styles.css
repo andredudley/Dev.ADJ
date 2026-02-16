@@ -207,13 +207,13 @@
  footer { 
     grid-area: footer;
     margin-left: 240px;
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: center;
     border-top: 1px solid;
  }
 
  .footer-email {
-   margin: 0.5rem auto;
+   margin-bottom: 0.5rem;
  }
 
  #footer-email-link { 
