@@ -207,9 +207,21 @@
  footer { 
     grid-area: footer;
     margin-left: 240px;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
     border-top: 1px solid;
+ }
+
+ .footer-email {
+   margin: 0.5rem auto;
+ }
+
+ #footer-email-link { 
+  color: #f5f5f5;
+ }
+
+ #footer-email-link:hover { 
+  color: #efafff;
  }
 
  /*Media Breakpoints (Genuinely it here)*/
