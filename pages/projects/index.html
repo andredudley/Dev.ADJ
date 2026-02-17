@@ -139,6 +139,13 @@
   toggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open");
   });
+
+  //experimental: hides hamburger menu after tapping any nav option
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+    });
+  }); 
 </script>
 </body>
 </html>

@@ -56,6 +56,7 @@
     z-index: 1000000000000;
  }
 
+ /*musings styling*/
  .musing-header { 
     grid-area: main;
     margin-bottom: 5rem;
@@ -261,6 +262,10 @@
     padding: 1rem;
   }
 
+  .musing-header { 
+    width: 85vw;
+  }
+
   footer {
     margin-left: 0;
   }
@@ -309,6 +314,10 @@
 
   main.main-content {
     margin-top: 90px;
+  }
+
+  .musing-header { 
+    width: 75vw;
   }
 
 
