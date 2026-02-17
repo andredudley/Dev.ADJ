@@ -278,7 +278,7 @@
 }
 
 /*average phones (768px and under)*/
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
   body {
     grid-template-areas:
