@@ -278,7 +278,7 @@
 }
 
 /*average phones (768px and under)*/
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
   body {
     grid-template-areas:
@@ -327,8 +327,8 @@
   }
 }
 
-/*tablets (1120px and under)*/
-@media (max-width: 1120px) {
+/*tablets (1024px and under)*/
+@media (min-width: 1024px) {
 
   body {
     grid-template-areas:
