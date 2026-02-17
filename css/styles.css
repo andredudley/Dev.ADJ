@@ -328,7 +328,7 @@
 }
 
 /*tablets (1024px and under)*/
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
 
   body {
     grid-template-areas:
