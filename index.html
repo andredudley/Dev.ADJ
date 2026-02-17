@@ -21,7 +21,7 @@
             <i class="fa fa-bars"></i>
         </button>
     </header>
-    <aside class="open">
+    <aside>
         <div class="adj-logo"> <!--Logo-->
         <div class="logo-container">
            <img src="./assets/adjlogos/ADJLogoWhite-small.png" />
@@ -111,8 +111,9 @@
 
    <!--JS for hamburger menu-->
 <script>
-  const toggleBtn = document.querySelector(".menu-toggle");
+   const toggleBtn = document.querySelector(".menu-toggle");
   const sidebar = document.querySelector("aside");
+  const navLinks = document.querySelectorAll(".tab-link");
 
   toggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open");
