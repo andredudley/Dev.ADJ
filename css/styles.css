@@ -60,6 +60,7 @@
  .musing-header { 
     grid-area: main;
     margin-bottom: 5rem;
+    width: 55vw;
  }
 
  /*sidebar section*/
