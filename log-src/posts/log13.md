@@ -9,4 +9,4 @@ Man, this CSS stuff is really tough. Who would have thought.
 <br><br>
 Especially trying to get stuff to fit properly on a Pixel Tablet.
 <br><br>
-Like, who even uses Pixel Tablets?? And, why are their dimensions so janky?
+Like, who even uses Pixel Tablets?? And, why are their dimensions so janky? (I'm coping)
