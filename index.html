@@ -38,7 +38,6 @@
                 <li><a class="nav-link tab-link" href="#log">Log</a></li>
             </ul>
         </nav>
-    </div>
 
     <div class="links">
         <a href="https://github.com/andredudley" target="_blank"><span class="logo fa fa-github fa-2x"></span></a>
@@ -111,19 +110,21 @@
 
    <!--JS for hamburger menu-->
 <script>
-  const toggleBtn = document.querySelector(".menu-toggle");
-  const sidebar = document.querySelector("aside");
+ // JS for hamburger menu
+const toggleBtn = document.querySelector(".menu-toggle");
+const sidebar = document.querySelector("aside");
+const navLinks = document.querySelectorAll(".nav-link"); // Define navLinks first
 
-  toggleBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("open");
+toggleBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+});
+
+// Close menu after clicking any nav link
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("open");
   });
-
-  //experimental: hides hamburger menu after tapping any nav option
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      sidebar.classList.remove("open");
-    });
-  }); 
+});
 </script>
 
 
