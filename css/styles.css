@@ -264,6 +264,10 @@
     margin: 0.5rem 0;
   }
 
+  .links { 
+    margin-top: 0;
+  }
+
   main.main-content {
     margin-top: 160px;
     margin-left: 0;
