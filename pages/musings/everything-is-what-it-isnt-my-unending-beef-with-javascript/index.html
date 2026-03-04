@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.ADJ | Everything Is What It Isn't: My Unending Beef with JavaScript</title>
+         <link rel="apple-touch-icon" sizes="180x180" href="../../../purpleadjfavicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../purpleadjfavicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../purpleadjfavicons/favicon-16x16.png">
+<link rel="manifest" href="../../../purpleadjfavicons/site.webmanifest">
+   <link rel="stylesheet" href="../../../css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+    article { 
+        line-height: 2.2rem;
+    }
+    .opening-quote, .lamentation { 
+        margin: 2rem 3rem;
+        text-align: center;
+    }
+    .fCC {
+        color: white;
+    }
+    .fCC:hover { 
+        text-decoration: none;
+    }
+    ol {
+        margin: 2rem 2rem;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+    section p {
+        margin: 2rem;
+    }
+    section { 
+        margin-top: 5rem;
+    }
+    .mdn-shoutout { 
+        padding: 2rem 3rem;
+        border-left: 2px solid;
+    }
+    hr { 
+        margin-top: 5rem;
+    }
+    .email-link { 
+        margin: 2rem;
+        color: white;
+    }
+    .email-link:hover { 
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+    <header class="site-header">
+    <h1 id="top-title-text">Dev.ADJ</h1>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <i class="fa fa-bars"></i>
+        </button>
+    </header>
+    <aside>
+        <div class="adj-logo"> <!--Logo-->
+        <div class="logo-container">
+           <img src="../../../assets/adjlogos/ADJLogoWhite-small.png" />
+        </div>
+    </div>
+
+     <!--Navigation (TBD whether on top or side)-->
+        <nav class="navbar">
+            <ul>
+                <li><a class="nav-link tab-link" href="../../../">Welcome</a></li>
+                <li><a class="nav-link tab-link" href="../../about/">About</a></li>
+                <li><a class="nav-link tab-link" href="../../musings/">Musings</a></li>
+                <li><a class="nav-link tab-link" href="../../projects/">Projects</a></li>
+                <li><a class="nav-link tab-link" href="../../../log/log/">Log</a></li>
+            </ul>
+        </nav>
+
+    <div class="links">
+        <a href="https://github.com/andredudley" target="_blank"><span class="logo fa fa-github fa-2x"></span></a>
+        <a href="https://www.linkedin.com/in/andre-dudley-jr/" target="_blank"><span class="logo fa fa-linkedin"></span></a>    
+    </div>
+    </aside>
+    <main class="main-content">
+        <article>
+        <header class="musing-header">
+            <h1>Everything Is What It Isn't: My Unending Beef With JavaScript</h1>
+            <p>March 4, 2026</p>
+        </header>
+
+        <p class="opening-quote"><i>"Everything is what it is, and everything is what it isn't, and that's why we love it."</i></p>
+        <p>I'm not entirely sure who came up with this quote, but I can not think of a more appropriate summation of the existence of JavaScript.</p>
+
+        <p>JavaScript is flexible, which can descend into chaos.</p>
+        <p>JavaScript is forgiving, which gives you more rope to hang yourself.</p>
+        <p>JavaScript is <strong>everywhere</strong>, and you cannot escape it.</p>
+
+        <p>And that's why we love it. I think. I hardly know myself.</p>
+
+        <section>
+            <h2>A Bit of Context</h2>
+            <p>
+                Before I implemented 11ty to my blog a little under a month ago, I hadn't done much with JavaScript.
+                I've used it, sure. I even used it to create this very blog. 
+                However, I would be lying through my teeth if I told you I was as adept with JS as I am with HTML, CSS, or even backend languages like Python.
+                Especially with the sheer amount of time I was spending in HTML and CSS (in <a class="fCC" href="https://www.freecodecamp.org/">freeCodeCamp</a> might I add. That website is top tier.),
+                it had been<strong>years</strong> since I had truly invested meaningful time into JS. 
+                The most I had remembered of it was simple stuff, and how I thought how cool and flexible it was.
+            </p>
+
+            <p class="lamentation">Boy, how big of a <em>moron</em> I was.</p>
+        </section>
+
+        <section>
+            <h2>Enter 11ty.</h2>
+            <p>
+                As I briefly mentioned earlier, I had implemented 11ty into my blog to somewhat automate the process of updating log entries.
+                The process of making new entries into the log is now a somewhat simple six step process:
+            </p>
+            <p class="process">
+                <ol>
+                    <li>Create a Markdown file.</li>
+                    <li>Fill the header.</li>
+                    <li>Write whatever below it.</li>
+                    <li>Run the command <code>npm run build</code> in the terminal.</li>
+                    <li>Commit to Repository.</li>
+                    <li>Profit.</li>
+                </ol>
+            </p>
+            <p>
+                Though the process is a bit simplified for the sake of your reading pleasure and me not delving into techno-mumbo-jumbo, this is generally how it goes.
+                But, the process of integrating and setting up 11ty for the log's automation? That was a massive can of worms on its own.
+                I say this because 11ty is written in JS and uses the Node.js framework as its runtime.
+            </p>
+            <p>
+                The point is: I was, for the first time in a few months at least, completely out of my depth.
+            </p>
+            <p>
+                I found myself staring into the pit of tutorial purgatory, and did not like in the slightest what was staring back.
+            </p>
+            <p>
+                What was once a fun little goal for my blog suddenly became a mess of tabs ranging from the 11ty website, to another 11ty tutorial, to a literal tech doc of JS.
+                I got it done, thank goodness, but the feeling that followed wasn't the sense of accomplishment I felt when I used grid to create the layout of this website.
+                Granted, HTML and CSS are markup and stylesheet languages, but any developer or programmer worth their salt knows how tough writing html and css can be.
+            </p>
+            <p>
+                But, with the depths of tutorial reliance staring into my eyes once again, I decided to take up JavaScript once more. 
+                I had it set in my mind that I was never going to rely on these tutorials again.
+            </p>
+        </section>
+
+        <section>
+            <h2>The Descent</h2>
+            <p>
+                When I was learning how to play fighting games, the path was clear, albeit difficult in the moment:<br>
+                Lose. Lab. Lose a bit less. Lab some more. Win. Sometimes.
+            </p>
+            <p>
+                When I was learning HTML and CSS, the feedback was immediate as well. 
+                Input text. Input Values. See results. Change values. Break layout. Fix layout.
+            </p>
+            <p>
+                JavaScript does <strong>NOT</strong> work like this.
+            </p>
+            <p>
+                JS finds the sneakiest, most irritating ways to not work. 
+                Or, when it feels spontaneous, it will just straight up explode in production because it hasn't gotten the chance to ruin your day yet.
+                I may or may not be speaking from experience.
+            </p>
+            <p>
+                And the most gutwrenching part? I couldn't just "git gud" at JS the same way I could with HTML, CSS, or other languages like Python.
+                The process of getting good with fighting games could hardly apply here either. 
+                The language constantly mutates with new frameworks, and then newer frameworks that people created to solve the problems the older frameworks, and then&mdash;just because some developers were in a silly, goofy mood&mdash;create another framework.
+                For the love of the game, or something, I don't know.
+            </p>
+            <p>
+                But, all I could hear is that same, lying voice:
+            </p>
+            <p><i>"Maybe I'm just not cut out for this"</i></p>
+            <p>That liar.</p>
+            <p>
+                But, the thing about the voice this time is that the rules of the road, so to speak, have changed. Significantly. Repeatedly.
+                And then they were tossed into a paper shredder and glued back together haphazardly. 
+                And, given the fact that JavaScript was made in ten days? It makes sense.
+            </p>
+        </section>
+        <section>
+            <h2>But, What If Jank Is The Point?</h2>
+            <p>I mean, just think about it.</p>
+            <p>
+                The flexibility of JS makes sense because if there is one way to describe the existence of the World Wide Web; it is flexible.
+                JS is forgiving because the web had to be forgiving to survive the horrendous code being tossed into it.
+                And, at the end of the day, the web won. So, JavaScript won.
+            </p>
+            <p>
+                Now, JavaScript isn't an inherently <i>bad</i> language in the way that, say, INTERCAL was when it came out in 1972.
+                It is a language that has had to, in the most literal sense, grow up with us and the advent of the World Wide Web.
+                On every device imaginable. Backwards compatible until the collapse of the internet.
+            </p>
+            <p>
+                You can find a great portion of the history of the World Wide Web in the weirdest, jankiest, most annoying corners of JavaScript.
+                And, in a sense, that's beautiful. Just sucks that I have to deal with it.
+            </p>
+        </section>
+        <section>
+            <h2>The Path Forward</h2>
+            <p>
+                I feel like there is a reason why people switch to Python and never look back. I think about doing the same at times.
+                Then I remember that I like creating things on the web, and the web is built on chaos. So here we are.
+            </p>
+            <p>
+                And what do I do?
+            </p>
+            <p>
+                The same I've always done. 
+                The same I've done with CSS. 
+                The same thing I did with Java. 
+                The same thing I did with Python.
+                The same thing I've done with any game or sport I ever picked up in my life.
+            </p>
+            <p>
+                I start from the bottom. The bare-bones basics. 
+                And I suck. A lot. Sometimes intentionally, other times because I genuinely suck.
+                As long as it takes.
+            </p>
+            <p>
+                I find myself in freeCodeCamp. I find myself in the MDN Docs. 
+                I find myself googling the same bug for the fifth time in an afternoon, hoping for an epiphany.
+            </p>
+            <section class="mdn-shoutout">
+                <p>
+                    Shoutout to MDN Web Docs, by the way. 
+                    Not just for JS, but web development in general. 
+                    HTML, CSS, JS, whatever the language, it felt like the documentation was written by people who were once in my shoes.
+                </p>
+                <p>No AI slop. No corpo-tech jargon. Just a ton of information with clear explanation with examples and guides.</p>
+                <p>Every single time I get stuck, I find myself on there. It's practically a web developer's Library of Alexandria&mdash;minus the fire.</p>
+                <p>Use it. Bookmark it. Use it again.</p>
+            </section>
+        </section>
+        <section>
+            <h2>"Everything Is What it Is"</h2>
+            <p>JavaScript is janky. And I keep coming back to it. For some reason.</p>
+            <p>
+                The opening quote really stuck with me throughout this post. 
+                Not because of its profound nature, but because I couldn't help but agree with it at every turn.
+                JavaScript is exactly what it is. And, what it is, is exactly what I need it to be, and also why I have a love-hate relationship with JS.
+            </p>
+            <p>
+                The same inconclusiveness that drives me up a wall is also what keeps me going. 
+                In the midst of my own frustration with the language, all I can think of is&mdash;
+            </p>
+            <p><i>Man, how cool would it be if I could figure this out.</i></p>
+        </section>
+        </article>
+        <hr>
+        <section aria-label="Email invitation" class="email-invite">
+    <h2 class="visually-hidden">Contact me</h2>
+    
+    <p class="invite-text">
+        Like what you see? Just want to say hello? Do you also despise JavaScript at times?
+    </p>
+    
+    <address class="invite-address">
+        <a href="mailto:dev.by.adj@gmail.com" class="email-link">
+            dev [dot] by [dot] adj [at] gmail [dot] com
+        </a>
+    </address>
+    
+    <p class="invite-note">
+        I read every email. No newsletter commitment or anything like that. Just a way to connect.
+    </p>
+    </section>
+    </main>
+    <footer>
+        <p>
+            Check me out here too, if you want:
+        </p>
+        <div class="footer-links">
+        <a href="https://github.com/andredudley" target="_blank"><span class="logo fa fa-github fa-2x"></span></a>
+        <a href="https://www.linkedin.com/in/andre-dudley-jr/" target="_blank"><span class="logo fa fa-linkedin"></span></a>    
+        </div>
+        <p id="copy">&copy; 2026 Dev.ADJ</p>
+    <p id="daily-message">You are Loved &#10014;</p>
+    <script src="../../../scripts/daily-bread.js"></script>
+    </footer>
+           <!--JS for hamburger menu-->
+   <script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const sidebar = document.querySelector("aside");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+  });
+  </script>
+</body>
+</html>
