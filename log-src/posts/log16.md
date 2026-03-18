@@ -1,5 +1,5 @@
 ---
-title: Log Post is Live.
+title: Musing Post is Live.
 date: 2026-03-04T16:49:00-05:00
 tags: log
 permalink: false
