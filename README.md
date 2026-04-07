@@ -23,4 +23,4 @@ Published On: Github Pages
 
 
 
-As always, you can check out the blog at [devadj.com]([URL](https://www.devadj.com/))!
+As always, you can check out the blog at [devadj.com](https://www.devadj.com/)!
